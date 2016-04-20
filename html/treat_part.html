@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html><!-- Version SVN: $Id: layout.php 3907 2015-08-03 15:08:31Z sven.poeche $ -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="robots" content="all" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- 描述和关键字 -->
+  <meta name="author" content="" />
+  <meta name="publisher" content="" />
+  <meta name="copyright" content="" />
+  <!-- 作者发布版权 -->
+  <meta name="creation_date" content="" />
+  <!-- 创建日期 -->
+  <meta name="revisit-after" content="10 days" />
+
+
+  <link rel="stylesheet" type="text/css" href="../css/reset.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome/css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/style.css" media="all">
+
+  <!-- Bootstrap core CSS -->
+<title>按部位检索</title>
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.js"></script>
+    <link href="/css/lteIE8.css" rel="stylesheet" type="text/css" media="all" />
+  <![endif]-->
+
+<style id="holderjs-style" type="text/css"></style>
+
+</head>
+
+<body>
+  <nav  class="navbar navbar-default navbar-static-top" role="navigation" id="siteHeader">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+      <div class="navbar-brand"><a href="saved_resource.html" id="siteLogo"><img src="../yss_images/your_logo_here_528f2d07233c1.png"></a></div>
+      <div class="collapse navbar-collapse" >
+        <ul class="nav navbar-nav" id="navLinks">
+          <li ><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+
+          <li class="dropdown hasSublinks active">
+            <a href="video.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">视频 <span class="caret"></span></a>
+            <ul class="dropdown-menu sublinks" style="display: none;">
+              <li><a href="treat_symptom.html">按症状检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_name.html">按病名检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_part.html">按部位检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_department.html">按科室检索</a></li>
+
+
+            </ul>
+          </li>
+          <li><a href="#">群组</a></li>
+          <li><a href="#">良医</a></li>
+          <li><a href="#">活动</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search" action="" method="post">
+
+            <div class="input-group">
+              <span role="status" aria-live="polite" class="ui-helper-hidden-accessible">
+
+              </span>
+              <input maxlength="128" type="text" id="search" name="search" class="form-control ui-autocomplete-input" placeholder="输入您想要查找的内容" autocomplete="off">
+              <span class="input-group-btn" id="searchAdd">
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+            <!-- input-group -->
+
+        </form>
+        <ul class="nav navbar-nav navbar-right " id="userActions" >
+          <li class="userLoginLink"><i class="fa fa-user"></i>登录
+          <section id="loginDropdown" class="clearfix" style="z-index: 10000;">
+              <i class="fa fa-arrow"></i>
+              <div class="clearfix">
+                <!-- Version SVN: $Id: _login.php 3944 2015-08-13 11:13:10Z sven.poeche $ -->
+                <div class="loginOptions">
+                  <!-- Version SVN: $Id: _login.php 85 2013-09-20 09:06:57Z sven.poeche $ -->
+                  <div class="facebookConnect">
+                    <a href="" class="btn btn-primary">还没有账号？点击注册</a>
+                  </div> <!-- .facebookConnect -->
+                </div> <!-- .loginOptions -->
+
+
+                <div class="userForm  userLogin">
+                  <form class="clearfix" id="header_login" name="header_login" action="" method="post" enctype="" role="form">
+                    <div class="form-group">
+                      <label class="control-label" for="signin_username">用户名</label>
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input maxlength="40" type="text" name="" class="form-control" placeholder="用户名" id="signin_username">
+                      </div>
+                    </div>
+                    <div class="form-group password">
+                      <label class="control-label" for="signin_password">密码</label>
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" name="signin[password]" class="form-control" placeholder="密码" id="">
+                      </div>
+                      <a class="forgotPassword" href="">忘记密码？</a>
+                    </div>
+                    <div class="form-group buttonpane clearfix">
+                      <input type="hidden" name="" value="" id="signin_position">
+                      <input type="hidden" name="" value="" id="signin__csrf_token">
+                      <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                  </form>
+                </div> <!-- .userLogin -->
+              </div>
+            </section> <!-- #loginDropdown -->
+            </li>
+
+        </ul>
+
+      </div>
+      <!-- collapse navbar-collapse -->
+
+    </div>
+    <!--  -->
+  </nav>
+  <!-- siteHeader -->
+  <div id="contentWrapper" class="container clearfix">
+
+
+    <div id="siteContent" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xlg-12 ">
+      <h2>按部位检索</h2>
+      <div class="choosePart">
+          <div id="partSlider" class="carousel slide" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#partSlider" data-slide-to="0" class="active ma">男</li>
+              <li data-target="#partSlider" data-slide-to="1" class="wo">女</li>
+              <li data-target="#partSlider" data-slide-to="2" class="ch">幼</li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xlg-9 leftPic">
+                  <img src="../images/man.png" height="700" class="" class="changeImg"
+                  alt="Planets" usemap="#manPart" id="man" />
+                  <p class="head">头、面部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="eye">眼&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="enm">耳、鼻、口&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="cb">前胸、后背&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="ha">手、腕部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-down"></i></p>
+                  <p class="ws">腹部、腰&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="lf">腿&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <map id ="manPart" name="manPart">
+                    <area shape ="rect" coords ="330,47,381,60"
+                    class="head"
+                    />
+                    <a href="/diseases/?age_period=1&part=1"></a>
+                    <area shape ="rect" coords ="329,61,381,73"
+                    class="eye"
+                    />
+                    <a href="/diseases/?age_period=1&part=2"></a>
+                    <area shape ="rect" coords ="320,75,371,144"
+                    class="enm"
+                    />
+                    <a href="/diseases/?age_period=1&part=3"></a>
+                    <area shape ="rect" coords ="285,147,425,265"
+                    class="cb"
+                    />
+                    <a href="/diseases/?age_period=1&part=4"></a>
+                    <area shape ="rect" coords ="68,150,650,190"
+                    class="ha"
+                    />
+                    <a href="/diseases/?age_period=1&part=5"></a>
+                    <area shape ="rect" coords ="290,267,415,360"
+                    class="ws"
+                    />
+                    <a href="/diseases/?age_period=1&part=6"></a>
+                    <area shape ="rect" coords ="285,360,425,680"
+                    class="lf"
+                    />
+                    <a href="/diseases/?age_period=1&part=7"></a>
+                  </map>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3 rightNav">
+                  <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                      请选择部位
+                    </div>
+                    <div class="panel-body btnPanel text-center">
+                      <a href="/diseases/?age_period=1&part=1" class="head">头、面部</a>
+                      <a href="/diseases/?age_period=1&part=2" class="eye">眼</a>
+                      <a href="/diseases/?age_period=1&part=3" class="enm">耳、鼻、口</a>
+                      <a href="/diseases/?age_period=1&part=4" class="cb">胸、背</a>
+                      <a href="/diseases/?age_period=1&part=5" class="ha">手、腕</a>
+                      <a href="/diseases/?age_period=1&part=6" class="ws">腰、腹</a>
+                      <a href="/diseases/?age_period=1&part=7" class="lf">腿脚</a>
+                      <a href="/diseases/?age_period=1&part=8" class="whole">全身</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- man -->
+              <div class="item">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xlg-9 leftPic">
+                  <img src="../images/woman.png" height="700" class="changeImg" id="woman"
+                  alt="Planets" usemap="#womanPart" />
+                  <p class="headw">头、面部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="eyew">眼&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="enmw">耳、鼻、口&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="cbw">前胸、后背&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="haw">手、腕部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-down"></i></p>
+                  <p class="wsw">腹部、腰&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="lfw">腿&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+
+
+
+                  <map id ="womanPart" name="womanPart">
+                    <area shape ="rect" coords ="300,40,359,60"
+                    class="headw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=1"></a>
+                    <area shape ="rect" coords ="300,61,359,73"
+                    class="eyew"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=2"></a>
+                    <area shape ="rect" coords ="300,75,359,144"
+                    class="enmw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=3"></a>
+                    <area shape ="rect" coords ="269,147,395,265"
+                    class="cbw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=4"></a>
+                    <area shape ="rect" coords ="48,150,630,190"
+                    class="haw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=5"></a>
+                    <area shape ="rect" coords ="275,267,390,360"
+                    class="wsw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=6"></a>
+                    <area shape ="rect" coords ="265,360,400,700"
+                    class="lfw"
+                    />
+                    <a href="/diseases/?gender=m&age_period=2&part=7"></a>
+
+
+
+                  </map>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3 rightNav">
+                  <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                      请选择部位
+                    </div>
+                    <div class="panel-body btnPanel text-center w">
+                      <a href="/diseases/?gender=m&age_period=2&part=1" class="headw">头、面部</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=2" class="eyew">眼</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=3" class="enmw">耳、鼻、口</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=4" class="cbw">胸、背</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=5" class="haw">手、腕</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=6" class="wsw">腰、腹</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=7" class="lfw">腿脚</a>
+                      <a href="/diseases/?gender=m&age_period=2&part=8" class="wholew">全身</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- woman -->
+              <div class="item">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xlg-9 leftPic">
+                  <img src="../images/child.png" height="700" class="changeImg" id="child"
+                  alt="Planets" usemap="#childPart" />
+                  <p class="headc">头、面部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="eyec">眼&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="enmc">耳、鼻、口&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="cbc">前胸、后背&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="hac">手、腕部&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-down"></i></p>
+                  <p class="wsc">腹部、腰&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <p class="lfc">腿&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></p>
+                  <map id ="childPart" name="childPart">
+                    <area shape ="rect" coords ="305,80,400,125"
+                    class="headc"
+                    />
+
+                    <a href="/diseases/?gender=w&age_period=2&part=1"></a>
+                    <area shape ="rect" coords ="300,129,419,169"
+                    class="eyec"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=2"></a>
+                    <area shape ="rect" coords ="305,171,400,214"
+                    class="enmc"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=3"></a>
+                    <area shape ="rect" coords ="279,216,415,335"
+                    class="cbc"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=4"></a>
+
+                    <area shape ="rect" coords ="118,230,279,440"
+                    class="hac"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=5"></a>
+                    <area shape ="rect" coords ="415,230,580,440"
+                    class="hac"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=5"></a>
+
+                    <area shape ="rect" coords ="279,336,415,440"
+                    class="wsc"
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=6"></a>
+
+                    <area shape ="rect" coords ="275,380,450,615"
+                    class="lfc"
+
+                    />
+                    <a href="/diseases/?gender=w&age_period=2&part=7"></a>
+                  </map>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3 rightNav">
+                  <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                      请选择部位
+                    </div>
+                    <div class="panel-body btnPanel text-center c">
+                      <a href="/diseases/?gender=w&age_period=2&part=1" class="headc">头、面部</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=2" class="eyec">眼</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=3" class="enmc">耳、鼻、口</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=4" class="cbc">胸、背</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=5" class="hac">手、腕</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=6" class="wsc">腰、腹</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=7" class="lfc">腿脚</a>
+                      <a href="/diseases/?gender=w&age_period=2&part=8" class="wholec">全身</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- child -->
+            </div>
+            <!-- Controls -->
+          </div>
+          <!-- indexSlider -->
+        </div>
+      </div>
+
+    </div>
+    <!-- siteContent -->
+  </div>
+  <!-- contentWrapper -->
+  <footer id="siteFooter">
+
+    <section id="mainFooter" class="container">
+
+      <section id="footerText">
+
+        <h5>医三世</h5>
+
+        <article class="text">
+          <p>应该写点啥</p>
+        </article>
+      </section>
+      <!-- #footerText -->
+
+      <section id="footerLegal">
+        <h5>网站信息</h5>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">联系我们</a></li>
+
+        </ul>
+      </section> <!-- #footerLegal -->
+
+      <section id="footerLinks">
+        <h5>友情链接</h5>
+        <ul>
+          <li><a href="">中国科学院</a></li>
+          <li><a href="">科学出版社</a></li>
+          <li><a href="">科学文库</a></li>
+        </ul>
+      </section>
+      <!-- #footerLegal -->
+
+    </section>
+      <!-- #mainFooter -->
+
+
+  </footer>
+    <!-- #siteFooter -->
+  <div id="vimpFooterWrapper">
+    <div id="vimpFooter">
+      <p class="copy">版权所有
+        <a target="_blank" href="">
+          意见反馈
+        </a>
+        © 2015, 2014, 2013, 2012, 2011, 2010
+      </p>
+    </div>
+  </div>
+
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;">
+
+</ul>
+  <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+  $('map area').mouseenter(changeSrcMap);
+  $('map area').mouseout(recoverMap);
+  $('.btnPanel a').mouseenter(changeSrcA);
+  $('.btnPanel a').mouseout(recoverA);
+  $('map area').click(clickMap);
+  function changeSrcMap(){
+    var c = $(this).attr('class');
+    var change = $(this).parent().siblings('img');
+    var srcn = '../images/'+c+'.png';
+    var t = document.getElementsByClassName(c);
+    var $t = $(t);
+    change.attr('src',srcn);
+    $t.addClass('active');
+    $t.siblings().removeClass('active');
+
+    $(this).removeClass('active');
+
+  }
+  function recoverMap(){
+    var c = $(this).attr('class');
+    var recover = $(this).parent().siblings('img');
+    var r = recover.attr('id');
+    var srcr = '../images/'+r+'.png';
+    var t = document.getElementsByClassName(c);
+    var $t = $(t);
+    recover.attr('src',srcr);
+    $t.removeClass('active');
+  }
+  function changeSrcA(){
+    var c = $(this).attr('class');
+    var change = $(this).parent().parent().parent().siblings().children('img');
+    var srcn = '../images/'+c+'.png';
+    var t = document.getElementsByClassName(c);
+    var $t = $(t);
+    change.attr('src',srcn);
+    $t.addClass('active');
+    $t.siblings().removeClass('active');
+
+    $(this).removeClass('active');
+
+  }
+  function recoverA(){
+    var c = $(this).attr('class');
+    var recover = $(this).parent().parent().parent().siblings().children('img');
+    var r = recover.attr('id');
+    var srcr = '../images/'+r+'.png';
+    var t = document.getElementsByClassName(c);
+    var $t = $(t);
+    recover.attr('src',srcr);
+    $t.removeClass('active');
+  }
+
+  function clickMap(){
+    var a = $(this).next('a');
+    var href = a.attr('href');
+    window.open(href);
+
+  }
+
+  </script>
+</body>
+</html>

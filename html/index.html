@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+<html><!-- Version SVN: $Id: layout.php 3907 2015-08-03 15:08:31Z sven.poeche $ -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="robots" content="all" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- 描述和关键字 -->
+  <meta name="author" content="" />
+  <meta name="publisher" content="" />
+  <meta name="copyright" content="" />
+  <!-- 作者发布版权 -->
+  <meta name="creation_date" content="" />
+  <!-- 创建日期 -->
+  <meta name="revisit-after" content="10 days" />
+
+  
+  <link rel="stylesheet" type="text/css" href="../css/reset.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome/css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/style.css" media="all">
+
+  <!-- Bootstrap core CSS -->
+<title>首页</title>
+
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.js"></script>
+    <link href="/css/lteIE8.css" rel="stylesheet" type="text/css" media="all" />
+  <![endif]-->
+
+<style id="holderjs-style" type="text/css"></style>
+
+</head>
+
+<body>
+  <nav  class="navbar navbar-default navbar-fixed-top" role="navigation" id="siteHeader">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+      <div class="navbar-brand"><a href="saved_resource.html" id="siteLogo"><img src="../yss_images/your_logo_here_528f2d07233c1.png"></a></div>
+      <div class="collapse navbar-collapse" >
+        <ul class="nav navbar-nav" id="navLinks">
+          <li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+
+          <li class="dropdown hasSublinks">
+            <a href="video.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">视频 <span class="caret"></span></a>
+            <ul class="dropdown-menu sublinks" style="display: none;">
+              <li><a href="treat_symptom.html">按症状检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_name.html">按病名检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_part.html">按部位检索</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <li><a href="treat_department.html">按科室检索</a></li>
+
+
+            </ul>
+          </li>
+          <li><a href="#">群组</a></li>
+          <li><a href="#">良医</a></li>
+          <li><a href="#">活动</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search" action="" method="post">
+          
+            <div class="input-group">
+              <span role="status" aria-live="polite" class="ui-helper-hidden-accessible">
+                      
+              </span>
+              <input maxlength="128" type="text" id="search" name="search" class="form-control ui-autocomplete-input" placeholder="输入您想要查找的内容" autocomplete="off">   
+              <span class="input-group-btn" id="searchAdd">
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+            <!-- input-group -->
+          
+        </form>
+        <ul class="nav navbar-nav navbar-right " id="userActions" >
+          <li class="userLoginLink"><i class="fa fa-user"></i>登录
+          <section id="loginDropdown" class="clearfix" style="z-index: 10000;">
+              <i class="fa fa-arrow"></i>
+              <div class="clearfix">
+                
+                <div class="loginOptions">
+                  
+                  <div class="register">
+                    <a href="login.html" class="btn btn-primary">还没有账号？点击注册</a>
+                  </div> 
+                </div> <!-- .loginOptions -->
+                
+
+                <div class="userForm  userLogin">
+                  <form class="clearfix" id="header_login" name="header_login" action="" method="post" enctype="" role="form">
+                    <div class="form-group">
+                      <label class="control-label" for="signin_username">用户名</label>            
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input maxlength="40" type="text" name="" class="form-control" placeholder="用户名" id="signin_username">            
+                      </div>
+                    </div>
+                    <div class="form-group password">
+                      <label class="control-label" for="signin_password">密码</label>            
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" name="signin[password]" class="form-control" placeholder="密码" id="">            
+                      </div>
+                      <a class="forgotPassword" href="">忘记密码？</a>
+                    </div>
+                    <div class="form-group buttonpane clearfix">
+                      <input type="hidden" name="" value="" id="signin_position">           
+                      <input type="hidden" name="" value="" id="signin__csrf_token">            
+                      <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                  </form>
+                </div> <!-- .userLogin -->
+              </div>
+            </section> <!-- #loginDropdown -->
+            </li>
+          
+        </ul>
+
+      </div>
+      <!-- collapse navbar-collapse -->
+        
+    </div>
+    <!--  -->
+  </nav>
+  <!-- siteHeader -->
+  <div id="contentWrapper" class="container clearfix" >
+    <article id="indexSlider">
+      <!-- Version SVN: $Id: _compSliderBox.php 3854 2015-07-21 08:48:32Z sven.poeche $ -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>   
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+          <div class="item active">
+           <img src="../yss_images/s1.jpg" alt="First slide">
+           <div class="carousel-caption"></div>
+          </div>
+          <div class="item">
+           <img src="../yss_images/s2.jpg" alt="Second slide">
+           <div class="carousel-caption"></div>
+          </div>
+          <div class="item">
+           <img src="../yss_images/s3.jpg" alt="Third slide">
+           <div class="carousel-caption"></div>
+          </div>
+          <div class="item">
+           <img src="../yss_images/s4.jpg" alt="Third slide">
+           <div class="carousel-caption"></div>
+          </div>
+          <div class="item">
+           <img src="../yss_images/s5.jpg" alt="Third slide">
+           <div class="carousel-caption"></div>
+          </div>
+          <div class="item">
+           <img src="../yss_images/s6.jpg" alt="Third slide">
+           <div class="carousel-caption"></div>
+          </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <i class="fa fa-chevron-left" style="position: relative;top:200px;"></i>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <i class="fa fa-chevron-right" style="position: relative;top:200px;"></i>
+        </a>
+      </div> 
+
+    </article> 
+    
+    <div id="siteContent" class="homePage col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xlg-12">
+      <article id="featured-media-box" class="mediaListing">
+        <h2>推荐视频</h2>
+        <section class="filter">
+          <article id="tagLinks">
+            <h3>热门搜索关键字</h3>
+              <a class="tag" href="">糖尿病</a>
+              <a class="tag" href="">高血压</a>
+              <a class="tag" href="">脑血栓</a>
+              <a class="tag" href="">心脏病</a>
+              <a class="tag" href="">心肌梗塞</a>
+              <a class="tag" href="">高血脂</a>
+              <a class="tag" href="">冠心病</a>
+              <a class="tag" href="">风湿性关节炎</a>
+              <a class="tag" href="">二十一三体综合征</a>
+              <a class="tag" href="">白血病</a>
+              <a class="tag" href="">淋巴结核</a>
+              <a class="tag" href="">肺结核</a>
+              <a class="tag" href="">肾结石</a>
+              <a class="tag" href="">肾衰竭</a>
+              <a class="tag" href="">尿毒症</a>
+              <a class="tag" href="">股骨头坏死</a>
+              <a class="tag" href="">腰椎间盘突出</a>
+              <a class="tag" href="">腰肌劳损</a>
+              <a class="tag" href="">编不下去了</a>
+              <a class="tag" href="">救命</a>
+          </article> <!-- #tagLinks -->
+      
+        </section> 
+        <!-- .filter -->
+        <img src="../yss_images/loader-60.gif" class="hide">
+        <!-- 等待时出现图片 -->
+        <section class="viewListing tab-content">
+
+        <div class="tab-pane active" id="bigThumbs">
+
+          <ul class="mediaThumbs big clearfix">
+            <li class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xlg-4">
+
+              <div class="mediaCover">
+
+                <span class="tagged featured">热门</span>
+                <!-- featured热门 new 最新 favorite 喜欢 own自己 friend 好友 -->
+                <img class="mediaThumb" data-src="" data-original="" src="../yss_images/s1.jpg" style="display: inline-block; ">
+                <h3>
+                  <i class="fa fa-video-camera"></i>
+                   哎呀好吃的               
+                </h3>
+              </div>
+              <!-- mediaCover -->
+              <div class="mediaOverlay">
+                <a href="">
+                  <h3>
+                       哎呀好吃的               </h3>
+                  <div class="text">
+                    一大堆蓝莓~
+                    <span class="view">观看</span>
+                  </div>
+                  <div class="additionalInfo clearfix">
+                    <div class="uploader">
+                      <img class="userThumb" src="../yss_images/s2.jpg">
+                      <span>用户1</span>
+                    </div>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-clock-o"></i> 02:30</li>
+                    <li><i class="fa fa-eye"></i> 1943</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </a>
+              </div>
+              <!-- mediaOverlay 遮罩层 -->
+            </li>
+            <li class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xlg-4">
+
+              <div class="mediaCover">
+
+                <span class="tagged new">最新</span>
+                <!-- featured热门 new 最新 favorite 喜欢 own自己 friend 好友 -->
+                <img class="mediaThumb"  src="../yss_images/s3.jpg" style="display: inline-block;">
+                <h3>
+                  <i class="fa fa-video-camera"></i>
+                   啊月亮               
+                </h3>
+              </div>
+              <!-- mediaCover -->
+              <div class="mediaOverlay">
+                <a href="">
+                  <h3>
+                    啊月亮                  
+                  </h3>
+                  <div class="text">
+                    明月出天山，苍茫云海间
+                    <span class="view">观看</span>
+                  </div>
+                  <div class="additionalInfo clearfix">
+                    <div class="uploader">
+                      <img class="userThumb" src="../yss_images/s4.jpg">
+                      <span>用户2</span>
+                    </div>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-clock-o"></i> 02:30</li>
+                    <li><i class="fa fa-eye"></i> 1943</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </a>
+              </div>
+              <!-- mediaOverlay 遮罩层 -->
+            </li>
+            <li class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xlg-4">
+
+              <div class="mediaCover">
+
+                <span class="tagged favorite">喜欢</span>
+                <!-- featured热门 new 最新 favorite 喜欢 own自己 friend 好友 -->
+                <img class="mediaThumb" data-src="" data-original="" src="../yss_images/s5.jpg" style="display: inline-block;">
+                <h3>
+                  <i class="fa fa-video-camera"></i>
+                  河山大好                
+                </h3>
+              </div>
+              <!-- mediaCover -->
+              <div class="mediaOverlay">
+                <a href="">
+                  <h3>
+                    河山大好                  
+                  </h3>
+                  <div class="text">岳阳楼记
+                    <span class="view">观看</span>
+                  </div>
+                  <div class="additionalInfo clearfix">
+                    <div class="uploader">
+                      <img class="userThumb" src="../yss_images/s6.jpg">
+                      <span>用户3</span>
+                    </div>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-clock-o"></i> 02:30</li>
+                    <li><i class="fa fa-eye"></i> 1943</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </a>
+              </div>
+            </li>
+          </ul> <!-- .mediaThumbs.big -->
+          
+
+        </div> <!-- #bigThumbs -->
+
+      </section> <!-- .viewListing -->
+      <div class="bottom">
+        <a href="" class="more">更多推荐</a>
+      </div>
+      
+    </article>
+    <!-- featured-media-box -->
+    <article id="media-box" class="mediaListing">
+
+      <h2>视频</h2>
+
+      <img src="loader-60.gif" class="hide">
+      <div class="tabbable">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#smallThumbs1" aria-controls="smallThumbs1" role="tab" data-toggle="tab">全部</a></li>
+            <li role="presentation"><a href="#smallThumbs2" aria-controls="smallThumbs2" role="tab" data-toggle="tab">按观看人数</a></li>
+            <li role="presentation"><a href="#smallThumbs3" aria-controls="smallThumbs3" role="tab" data-toggle="tab">按评论数</a></li>
+            <li role="presentation"><a href="#smallThumbs4" aria-controls="smallThumbs4" role="tab" data-toggle="tab">按喜欢</a>
+          </li>
+        </ul>
+        <hr>
+
+        <section role="tabpanel" class="viewListing tab-content active">
+
+          <div class="tab-pane active" id="smallThumbs1">
+
+            <ul class="mediaThumbs small clearfix">
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s1.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s1.jpg">
+                        <span>上传者姓名1</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      蓝莓上传了一个视频蓝莓啦啦啦啦啦啦啦啦啦啦                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 01:31</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 415</li>
+                    <li><i class="fa fa-comment-o"></i> 2</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb"  src="../yss_images/s2.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s2.jpg">
+                        <span>上传者昵称</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      一堆药品                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:33</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 957</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s3.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s3.jpg">
+                        <span>上传者这次叫啥</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      Steve Jobs (Trailer)                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:41</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 488</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s4.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s4.jpg">
+                        <span>上传者好烦</span>
+                      </div>
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      漂亮的烟花~              
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 03:55</p>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 242</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              
+            </ul> <!-- .mediaThumbs.small -->
+
+          </div> 
+          <!-- #smallThumbs -->
+          <div class="tab-pane" id="smallThumbs2">
+
+            <ul class="mediaThumbs small clearfix">
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s1.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s1.jpg">
+                        <span>上传者姓名2</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      蓝莓上传了一个视频蓝莓啦啦啦啦啦啦啦啦啦啦                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 01:31</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 415</li>
+                    <li><i class="fa fa-comment-o"></i> 2</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb"  src="../yss_images/s2.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s2.jpg">
+                        <span>上传者昵称</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      一堆药品                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:33</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 957</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s3.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s3.jpg">
+                        <span>上传者这次叫啥</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      Steve Jobs (Trailer)                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:41</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 488</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s4.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s4.jpg">
+                        <span>上传者好烦</span>
+                      </div>
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      漂亮的烟花~              
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 03:55</p>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 242</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              
+            </ul> <!-- .mediaThumbs.small -->
+
+          </div> 
+          <div class="tab-pane" id="smallThumbs3">
+
+            <ul class="mediaThumbs small clearfix">
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s1.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s1.jpg">
+                        <span>上传者姓名3</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      蓝莓上传了一个视频蓝莓啦啦啦啦啦啦啦啦啦啦                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 01:31</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 415</li>
+                    <li><i class="fa fa-comment-o"></i> 2</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb"  src="../yss_images/s2.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s2.jpg">
+                        <span>上传者昵称</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      一堆药品                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:33</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 957</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s3.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s3.jpg">
+                        <span>上传者这次叫啥</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      Steve Jobs (Trailer)                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:41</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 488</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s4.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s4.jpg">
+                        <span>上传者好烦</span>
+                      </div>
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      漂亮的烟花~              
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 03:55</p>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 242</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              
+            </ul> <!-- .mediaThumbs.small -->
+
+          </div> 
+          <div class="tab-pane " id="smallThumbs4">
+
+            <ul class="mediaThumbs small clearfix">
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s1.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s1.jpg">
+                        <span>上传者姓名4</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      蓝莓上传了一个视频蓝莓啦啦啦啦啦啦啦啦啦啦                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 01:31</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 415</li>
+                    <li><i class="fa fa-comment-o"></i> 2</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb"  src="../yss_images/s2.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s2.jpg">
+                        <span>上传者昵称</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      一堆药品                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:33</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 957</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s3.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s3.jpg">
+                        <span>上传者这次叫啥</span>
+                      </div>                             
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      Steve Jobs (Trailer)                
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 02:41</p>
+                  </div>                      
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 488</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 1</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-3">
+
+                <article>
+                  <div class="mediaCover">
+                    <a href="">
+
+                      <img class="mediaThumb" src="../yss_images/s4.jpg" style="display: inline-block;">
+                      <i class="fa fa-video-camera"></i>
+                      <div class="icons"><i class="fa fa-play-circle"></i></div>
+                      <div class="uploader">
+                        <img class="userThumb" src="../yss_images/s4.jpg">
+                        <span>上传者好烦</span>
+                      </div>
+                    </a>
+                  </div>
+                  <a href="">
+                    <h3>
+                      漂亮的烟花~              
+                    </h3>
+                  </a>
+                  <div class="additionalInfo clearfix">
+                    <p><i class="fa fa-clock-o"></i> 03:55</p>
+                  </div>
+                  <ul class="details clearfix">
+                    <li><i class="fa fa-eye"></i> 242</li>
+                    <li><i class="fa fa-comment-o"></i> 0</li>
+                    <li><i class="fa fa-heart-o"></i> 0</li>
+                  </ul>
+                </article>
+              </li>
+              
+            </ul> <!-- .mediaThumbs.small -->
+
+          </div> 
+
+        </section> <!-- .viewListing -->
+      </div>
+      
+
+
+
+      <div class="bottom">
+        <a href="" class="more">更多</a>
+      </div>
+    </article> <!-- .mediaListing -->
+    <article id="activities-box" class="activityListing">
+        <h2>网站动态</h2>
+        <ul class="userActivity">
+          <li>
+            <article class="media">
+              <section class="heading clearfix">
+                <img class="userThumb" src="../yss_images/s1.jpg">
+                <header class="clearfix">
+                  <h4>
+                    <a href="">医三世</a>
+                    正式发布                      
+                    <i class="fa fa-sitemap"><span></span></i>
+                    <a href="">
+                     网站                      </a>
+                    与大家见面                    
+                  </h4>
+                  <span class="time">November 15, 2015</span>
+                </header>
+              </section>
+              <section class="content clearfix">
+                <a href="">
+                  <div class="mediaCover">
+                    <img class="mediaThumb" src="../yss_images/s2.jpg">
+                    <i class="fa fa-video-camera"></i>
+                  </div>
+                  <div class="mediaText">
+                    <h3>总览视频</h3>
+                    <div class="text">
+                      <p>网站介绍</p>
+                    </div>
+                  </div>
+                </a>
+              </section>
+            </article> <!-- .media -->
+          </li>
+          <li>
+            <article class="media">
+              <section class="heading clearfix">
+                <img class="userThumb" src="../yss_images/s3.jpg">
+                  <header class="clearfix">
+                    <h4>
+                      <a href="http://pacific.demo.vimp.com/user/view/user/admin/uid/1">医三世</a>
+                      上传了 
+                      <i class="fa fa-video-camera"><span></span></i> 
+                      <a href="">
+                        视频                      </a>
+                    </h4>
+                    <span class="time">November 12, 2015</span>
+                  </header>
+                </section>
+                <section class="content clearfix">
+                  <a href="">
+                  <div class="mediaCover">
+                    <img class="mediaThumb" src="../yss_images/s4.jpg">
+                    <i class="fa fa-video-camera"></i>
+                  </div>
+                  <div class="mediaText">
+                    <h3>第一个医学科普视频</h3>
+                    <div class="text">
+                      <p>我们身边还有哪些平时注意不到的小细节</p>
+                    </div>
+                  </div>
+                </a>
+              </section>
+            </article> <!-- .media -->
+          </li>
+        </ul>
+      </article>
+      <!-- activity box -->
+    </div>
+    <!-- siteContent -->
+
+  </div>
+  <!-- contentWrapper -->
+  <footer id="siteFooter">
+
+      <section id="mainFooter" class="container">
+
+        <section id="footerText">
+
+          <h5>医三世</h5>
+
+          <article class="text">
+            <p>应该写点啥</p>
+          </article>
+        </section> 
+        <!-- #footerText -->
+
+        <section id="footerLegal">
+          <h5>网站信息</h5>
+          <ul>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">联系我们</a></li>
+            
+          </ul>
+        </section> <!-- #footerLegal -->
+
+        <section id="footerLinks">
+          <h5>友情链接</h5>
+          <ul>
+            <li><a href="">中国科学院</a></li>
+            <li><a href="">科学出版社</a></li>
+            <li><a href="">科学文库</a></li>
+          </ul>
+        </section>  
+        <!-- #footerLegal -->
+
+      </section> 
+      <!-- #mainFooter -->
+
+
+    </footer> 
+    <!-- #siteFooter -->
+    <div id="vimpFooterWrapper">
+      <div id="vimpFooter">
+        <p class="copy">版权所有
+          <a target="_blank" href=""> 
+            意见反馈
+          </a> 
+          © 2015, 2014, 2013, 2012, 2011, 2010
+        </p>
+      </div>
+    </div>
+
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;">
+  
+</ul>
+  <script type="text/javascript" src="../js/jquery－1.10.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+  <script src="../js/stickUp.min.js"></script>
+  
+  <script type="text/javascript">
+   jQuery(function($) {
+    $(document).ready( function() {
+      //enabling stickUp on the '.navbar-wrapper' class
+      $('#siteHeader').stickUp();
+    });
+  });
+   //<![CDATA[
+// slider_fade
+$(document).ready(function(event) {
+  $.each($('#indexSlider'), function(index, element) {
+    $(element).removeClass('hide').hide().slideDown(2000).fadeIn(3000);
+  });
+});
+// mainmenu_hover
+$(document).ready(function(event) {
+  $('#siteHeader li:not(.active) .sublinks').hide();
+  $('#siteHeader li.hasSublinks:not(.active)').hover(
+    function(event) {
+      clearTimeout($(this).data('timeout'));
+      if(!$(this).children('.sublinks').is(':visible'))
+      {
+        $(this).children('.sublinks').delay(250).slideDown('slow');
+      }
+    },
+    function(event) {
+      if($(this).children('.sublinks').is(':visible'))
+      {
+        var element = $(this).data('timeout', setTimeout(function() {
+          element.children('.sublinks').slideUp('slow')
+        }, 2000));
+      }
+    }
+  );
+});
+
+
+  </script>
+</body>
+</html>
